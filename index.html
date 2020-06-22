@@ -1,0 +1,61 @@
+﻿<html>
+
+<body>
+
+  <head>
+    <style>
+      .header {
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;
+}
+.header a{
+  float: left;
+  color: red;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+.header a.filters{
+  font-size: 35px;
+  font-weight: bold;
+}
+.header a:hover{
+  background-color: indigo;
+  color: white;
+}
+.header a.active{
+  background-color: indigo;
+  color: white;
+}
+.headerright a{
+  float: right;
+}
+.bw {
+  background-image: linear-gradient(
+  to left,
+    rgba(2, 0, 37, 0),
+    rgba(2, 0, 37, 1)
+  ); 
+}
+.headerright {
+  background-color: white
+}
+    </style>
+    <div class="header">
+      <a href="index.html" class="filters"> Try These Filters</a>
+      <div class="headerright">
+        <a class="active" href="index.html">Home</a>
+        <a href="red.html">Red Filter</a>
+        <a href="gray.html">Gray Filter</a>
+        <a href="rainbow.html">Rainbow Filter</a>
+        <a class="bw" href="Bluewave.html">Blue Wave</a>
+      </div>
+    </div>
+  </head>
+</body>
+
+</html>
