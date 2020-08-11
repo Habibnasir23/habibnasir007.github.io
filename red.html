@@ -1,39 +1,53 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     .header {
   overflow: hidden;
   background-color: black;
-  padding: 20px 10px;
+  padding: 55px 20px;
 }
 .header a{
   float: left;
-  color: red;
+  color: #03e9f4;
   text-align: center;
   padding: 12px;
   text-decoration: none;
   font-size: 20px;
   line-height: 25px;
   border-radius: 4px;
+  transition: 1s;
+  overflow: hidden;
 }
 .header a.filters{
   font-size: 35px;
   font-weight: bold;
 }
 .header a:hover{
-  background-color: indigo;
-  color: white;
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 20px #03e9f4,
+                0 0 30px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 50px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 .header a.active{
-  background-color: indigo;
-  color: white;
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 20px #03e9f4,
+                0 0 30px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 50px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 .headerright a{
   float: right;
+  letter-spacing: 4px;
 }
 .bw {
-  background-image: linear-gradient(
+  //background-image: linear-gradient(
   to left,
     rgba(2, 0, 37, 0),
     rgba(2, 0, 37, 1)
@@ -42,15 +56,105 @@
 .headerright {
   background-color: white
 }
+body {
+  background-color: black;
+    }
+    h1 {
+  text-align: center;
+      color: #03e9f4;
+}
     h1 {
   text-align: center;
 }
 canvas {
   width: 500px;
   height: 200px;
-  border: solid black 1px;
+  border: solid #03e9f4 1px;
   margin: 40px;
 }
+    .red1 {
+      color: #03e9f4;
+      background-color: black;
+      border: solid #03e9f4 1px;
+      padding: 10px 25px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      transition: 1s;
+    }
+    .rst {
+      color: #03e9f4;
+      background-color: black;
+      border: solid #03e9f4 1px;
+      padding: 10px 25px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      margin: 20px 50px;
+      transition: 1s;
+    }
+    input[type="file"] {
+    display: none;
+}
+    .custom-file-upload {
+    color: #03e9f4;
+      background-color: black;
+      border: solid #03e9f4 1px;
+      padding: 10px 25px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      margin: 20px 50px;
+      transition: 1s;
+}
+    .btn{
+      color: #03e9f4;
+      background-color: black;
+      border: solid #03e9f4 1px;
+      padding: 10px 25px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      margin: 20px 50px;
+      transition: 1s;
+      float: right;
+    }
+    .red1:hover {
+      background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 20px #03e9f4,
+                0 0 30px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 50px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    }
+    .rst:hover {
+      background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 20px #03e9f4,
+                0 0 30px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 50px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    }
+    .custom-file-upload:hover {
+      background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 20px #03e9f4,
+                0 0 30px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 50px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    }
+    .btn:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 20px #03e9f4,
+                0 0 30px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 50px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    }
   </style>
 
   <script>
@@ -461,9 +565,14 @@ canvas {
   </canvas>
   <canvas id="c2">
   </canvas>
+  <label for="upl" class="custom-file-upload">
+    Upload Picture
+</label>
   <input type="file" multiple="false" accept="image/*" id="upl" onchange=loadimg()>
-  <input type = "button" value = "Turn red" id = "red1" onclick = dored() >
-  <input type="button" value="Reset" id="rst" onclick=reset()>
+  <input type = "button" value = "Turn red" class = "red1" onclick = dored() >
+  <input type="button" value="Reset" class="rst" onclick=reset()>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+  <button class="btn"  onclick="download_image()"><i class="fa fa-download"></i> Download</button>
   
   <script>
     var image = null;
@@ -496,6 +605,14 @@ function reset() {
   image = new SimpleImage(imgfile);
   image.setSize(500, 200);
   image.drawTo(can2);
+}
+    function download_image(){
+  var canvas = document.getElementById("c2");
+  var image1 = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+  var link = document.createElement('a');
+  link.download = "filter-image.png";
+  link.href = image1;
+  link.click();
 }
   </script>
     
