@@ -3,46 +3,72 @@
 <body>
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       .header {
   overflow: hidden;
   background-color: black;
-  padding: 20px 10px;
+  padding: 55px 20px;
 }
 .header a{
   float: left;
-  color: red;
+  color: #03e9f4;
   text-align: center;
   padding: 12px;
   text-decoration: none;
   font-size: 20px;
   line-height: 25px;
   border-radius: 4px;
+  transition: 1s;
+  overflow: hidden;
 }
 .header a.filters{
   font-size: 35px;
   font-weight: bold;
 }
 .header a:hover{
-  background-color: indigo;
-  color: white;
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 20px #03e9f4,
+                0 0 30px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 50px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 .header a.active{
-  background-color: indigo;
-  color: white;
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 20px #03e9f4,
+                0 0 30px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 50px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 .headerright a{
   float: right;
+    letter-spacing: 4px;
 }
 .bw {
-  background-image: linear-gradient(
+  //background-image: linear-gradient(
   to left,
     rgba(2, 0, 37, 0),
     rgba(2, 0, 37, 1)
   ); 
+    
 }
 .headerright {
   background-color: white
+}
+body {
+  background-color: black;
+}
+.img2 {
+  float: right;
+  padding: 50px 10px;
+}
+.img4 {
+  float: right;
+  padding: 50px 10px;
 }
     </style>
     <div class="header">
@@ -55,6 +81,13 @@
         <a class="bw" href="bluewave.html">Blue Wave</a>
       </div>
     </div>
+    <div>
+      <image class="img1" src="https://res.cloudinary.com/dutftbysh/image/upload/v1593369629/gray_1_fxjlgo.jpg" width="52%" height="480" />
+      <image class="img2" src="https://res.cloudinary.com/dutftbysh/image/upload/v1593369594/blue_wave_oowhrf.jpg" width="52%" height="480" />
+      <image class="img3" src="https://res.cloudinary.com/dutftbysh/image/upload/v1593369583/rainbow_gicu46.jpg" width="52%" height="480" />
+      <image class="img4" src="https://res.cloudinary.com/dutftbysh/image/upload/v1593369587/red_t3qvs4.jpg" width="52%" height="480" />
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 </body>
 
